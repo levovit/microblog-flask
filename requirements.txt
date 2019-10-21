@@ -8,6 +8,7 @@ chardet==3.0.4
 Click==7.0
 cryptography==2.7
 dominate==2.4.0
+elasticsearch==7.0.5
 Flask==1.1.0
 Flask-Babel==0.12.2
 Flask-Bootstrap==3.3.7.1
