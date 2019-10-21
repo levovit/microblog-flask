@@ -1,6 +1,6 @@
-# -*- coding: utf-8 -*-
+import os
 from datetime import datetime
-from flask import render_template, flash, redirect, url_for, request, g, jsonify
+from flask import render_template, flash, redirect, url_for, request, g, jsonify, send_from_directory
 from flask_login import current_user, login_user, logout_user, login_required
 from flask_babel import get_locale
 from guess_language import guess_language
@@ -204,3 +204,7 @@ def translate_text():
                                       request.form['source_language'],
                                       request.form['dest_language'])})
 
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'icon.ico', mimetype='image/vnd.microsoft.icon')
