@@ -197,7 +197,6 @@ def unfollow(username):
 
 
 @app.route('/translate', methods=['POST'])
-@login_required
 def translate_text():
     return jsonify({'text': translate(request.form['text'],
                                       request.form['source_language'],
