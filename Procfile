@@ -1,1 +1,2 @@
-web: python3 the_microblog.py -p $PORT
+web: flask db upgrade;
+gunicorn microblog:app
